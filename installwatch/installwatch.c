@@ -2957,10 +2957,10 @@ struct dirent *readdir(DIR *dir) {
 }
 
 #if (GLIBC_MINOR <= 4)
-int readlink(const char *path,char *buf,size_t bufsiz) {
+int readlink_dummy(const char *path,char *buf,size_t bufsiz) {
 	int result;
 #else
-ssize_t readlink(const char *path,char *buf,size_t bufsiz) {
+ssize_t readlink_dummy(const char *path,char *buf,size_t bufsiz) {
 	ssize_t result;
 #endif
 	instw_t instw;
@@ -3095,7 +3095,7 @@ int rmdir(const char *pathname) {
 	return result;
 }
 
-int scandir(	const char *dir,struct dirent ***namelist,
+int scandir_dummy(	const char *dir,struct dirent ***namelist,
 		int (*select)(const struct dirent *),
 #if (GLIBC_MINOR >= 10)
 		int (*compar)(const struct dirent **,const struct dirent **)	) {
@@ -3711,7 +3711,7 @@ struct dirent64 *readdir64(DIR *dir) {
 	return result;
 }
 
-int scandir64(	const char *dir,struct dirent64 ***namelist,
+int scandir64_dummy(	const char *dir,struct dirent64 ***namelist,
 		int (*select)(const struct dirent64 *),
 #if (GLIBC_MINOR >= 10)
 		int (*compar)(const struct dirent64 **,const struct dirent64 **)	) {

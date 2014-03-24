@@ -4,14 +4,14 @@
 # Well, the only configurable part is the following variable.
 # Make sure the directory you specify exists.
 
-PREFIX=/usr/local
+PREFIX=/usr
 
 # End of configurable part
 
 VERSION=0.7.0beta7
 
 BINDIR=$(PREFIX)/bin
-LIBDIR=$(PREFIX)/lib
+LIBDIR=$(PREFIX)/lib64
 
 all: installwatch.so
 

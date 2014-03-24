@@ -16,7 +16,7 @@
 DEBUG=0
 
 # Location of the "installwatch" program
-INSTALLWATCH_PREFIX="/usr/local"
+INSTALLWATCH_PREFIX="/usr"
 INSTALLWATCH=${INSTALLWATCH_PREFIX}/bin/installwatch
 
 # Location of the makepkg program. "makepak" is the default, and is 
@@ -117,7 +117,7 @@ RESET_UIDS=0
 NEW_SLACK=1
 
 # Comma delimited list of files/directories to be ignored
-EXCLUDE=""
+EXCLUDE="/selinux"
 
 # Accept default values for all questions?
 ACCEPT_DEFAULT=0

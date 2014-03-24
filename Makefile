@@ -1,10 +1,10 @@
 # $Id: Makefile,v 1.6.2.1 2008/11/09 07:48:18 izto Exp $
 
 # Where to install.
-PREFIX=/usr/local
+PREFIX=/usr
 BINDIR=$(PREFIX)/sbin
 LCDIR=$(PREFIX)/lib/checkinstall/locale
-CONFDIR=$(PREFIX)/lib/checkinstall
+CONFDIR=/etc/checkinstall
 
 all:
 	for file in locale/checkinstall-*.po ; do \
